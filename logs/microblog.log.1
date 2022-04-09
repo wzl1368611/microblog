@@ -1,0 +1,146 @@
+2022-03-13 11:43:05,494 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 11:43:21,637 ERROR: Exception on /edit_profile [POST] [in c:\python38\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\python38\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\2022定業\pycharm\project\microblog\app\routes.py", line 115, in edit_profile
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "c:\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "c:\python38\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\persistence.py", line 236, in save_obj
+    _emit_update_statements(
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\persistence.py", line 1000, in _emit_update_statements
+    c = connection._execute_20(
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "c:\python38\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "c:\python38\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "c:\python38\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('Susan', 'hello world.', 2)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-03-13 11:57:47,237 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 14:40:49,797 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 14:41:40,484 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 14:42:02,567 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 14:58:30,774 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:12:47,868 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:13:18,398 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:22:29,241 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:25:46,636 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:26:40,079 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:44:05,574 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 16:45:28,847 ERROR: Exception on /follow/Susan [GET] [in c:\python38\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\sqlalchemy\sql\base.py", line 1693, in _entity_namespace_key
+    return getattr(ns, key)
+AttributeError: type object 'User' has no attribute 'usernmae'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\python38\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\2022定業\pycharm\project\microblog\app\routes.py", line 127, in follow
+    user = User.query.filter_by(usernmae=username).first()
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\query.py", line 1793, in filter_by
+    clauses = [
+  File "c:\python38\lib\site-packages\sqlalchemy\orm\query.py", line 1794, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "c:\python38\lib\site-packages\sqlalchemy\sql\base.py", line 1695, in _entity_namespace_key
+    util.raise_(
+  File "c:\python38\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "user" has no property "usernmae"
+2022-03-13 16:48:34,939 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 17:10:51,558 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 17:10:59,278 ERROR: Exception on / [GET] [in c:\python38\lib\site-packages\flask\app.py:1457]
+Traceback (most recent call last):
+  File "c:\python38\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\python38\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\python38\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "c:\python38\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\2022定業\pycharm\project\microblog\app\routes.py", line 52, in index
+    return render_template('index.html',title='Home Page',posts=posts,form=form)
+  File "c:\python38\lib\site-packages\flask\templating.py", line 148, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\python38\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\python38\lib\site-packages\jinja2\environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "c:\python38\lib\site-packages\jinja2\environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "c:\python38\lib\site-packages\jinja2\loaders.py", line 137, in load
+    code = environment.compile(source, name, filename)
+  File "c:\python38\lib\site-packages\jinja2\environment.py", line 757, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\python38\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\2022定業\pycharm\project\microblog\app\templates\index.html", line 8, in template
+    {{form.post(cols=32,rows=4}} <br>
+jinja2.exceptions.TemplateSyntaxError: unexpected '}', expected ')'
+2022-03-13 17:11:34,892 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 17:15:12,703 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
+2022-03-13 17:32:55,470 INFO: Microblog Startup [in D:\2022定業\pycharm\project\microblog\app\__init__.py:48]
